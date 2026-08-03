@@ -1,0 +1,14 @@
+name = "mt5-monitor-pro"
+main = "apps/worker/src/index.ts"
+compatibility_date = "2025-07-18"
+
+workers_dev = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "mt5-monitor-db"
+database_id = "e9ae664f-e447-4b64-aa2f-a9e2086b2ee2"
+
+[vars]
+APP_NAME = "MT5 Monitor Pro"
+API_VERSION = "v1"

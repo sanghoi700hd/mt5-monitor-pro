@@ -1,0 +1,13 @@
+# Node
+node_modules/
+.next/
+
+# Environment
+.env
+.env.*
+
+# Wrangler
+.wrangler/
+
+# Logs
+*.log

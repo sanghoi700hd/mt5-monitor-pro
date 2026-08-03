@@ -1,0 +1,51 @@
+{
+  "name": "mt5-monitor-pro",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "pnpm --dir apps/dashboard dev",
+    "dev:worker": "pnpm --dir apps/worker dev",
+    "build": "pnpm --dir apps/dashboard build",
+    "deploy:worker": "wrangler deploy",
+    "db:migrate": "wrangler d1 migrations apply mt5-monitor-pro --local",
+    "db:migrate:remote": "wrangler d1 migrations apply mt5-monitor-pro"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260702.1",
+    "@types/node": "^22.10.1",
+    "tsx": "^4.19.0",
+    "typescript": "^5.9.3",
+    "wrangler": "^3.114.17"
+  },
+  "engines": {
+    "node": ">=20.12.0",
+    "pnpm": ">=9.0.0"
+  },
+  "description": "MT5 Monitor Pro is a production-oriented monitoring and operations platform for MetaTrader 5 accounts. It combines a Next.js dashboard, Cloudflare Workers for ingestion and API delivery, Cloudflare D1 for durable storage, and an Expert Advisor implementation in the ea/ folder for event streaming and trade monitoring.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanghoi700hd/mt5-monitor-pro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sanghoi700hd/mt5-monitor-pro/issues"
+  },
+  "homepage": "https://github.com/sanghoi700hd/mt5-monitor-pro#readme",
+  "dependencies": {
+    "hono": "^4.12.33",
+    "jose": "^6.2.7",
+    "zod": "^4.4.3"
+  }
+}
